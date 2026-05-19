@@ -1,105 +1,250 @@
 # Team Task Manager Full-Stack App
 
-A simple full-stack project management app built with **React**, **Node.js REST APIs**, and a file-backed **NoSQL-style JSON database**.
+A modern full-stack task and project management platform built using React and Node.js. This application allows teams to manage projects, assign tasks, track progress, and collaborate with role-based access control.
 
-## Features
+---
 
-- User signup and login
-- Admin and Member roles
-- Role-based access control
-- Project creation and team member management
-- Task creation, assignment, due dates, and status tracking
-- Dashboard with total tasks, completion, overdue tasks, and project progress
-- REST API backend with validations and relationships
+# 🚀 Live Demo
 
-## Tech Stack
+## Backend Live URL
+https://team-task-manager-full-stack-p04u.onrender.com
 
-- Frontend: React, HTML, CSS
-- Backend: Node.js HTTP server
-- Database: JSON document database stored in `backend/data/db.json`
-- Auth: Token-based auth with hashed passwords
+---
 
-## Run Locally
+# 🚀 Features
+
+- User Signup and Login Authentication
+- Token-based Authentication System
+- Admin and Member Roles
+- Role-Based Access Control (RBAC)
+- Create and Manage Projects
+- Add and Manage Team Members
+- Create, Assign, Update, and Delete Tasks
+- Task Priority and Due Date Management
+- Dashboard Analytics
+- Track Completed, Pending, and Overdue Tasks
+- REST API Architecture
+- File-Based JSON Database
+- Responsive Frontend UI
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- React.js
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+- Node.js
+- REST APIs
+- Native HTTP Server
+
+## Database
+- JSON-based NoSQL-style File Database
+
+## Authentication
+- Token-Based Authentication
+- Password Hashing
+
+---
+
+# 📂 Project Structure
+
+```bash
+team-task-manager-full-stack/
+│
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── data/
+│       └── db.json
+│
+├── frontend/
+│   ├── index.html
+│   └── src/
+│       ├── app.js
+│       └── styles.css
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Sudhir104/Team-Task-Manager-Full-Stack.git
+```
+
+## Move to Project Folder
+
+```bash
+cd Team-Task-Manager-Full-Stack
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Start Application
 
 ```bash
 npm start
 ```
 
-Then open:
+---
 
-```text
+# 🌐 Run Locally
+
+After starting the server, open:
+
+```bash
 http://localhost:5000
 ```
 
-## Demo Login
+---
 
-The app creates default users automatically on first run:
+# 🔑 Demo Credentials
+
+The application automatically creates demo users on first run.
 
 | Role | Email | Password |
-| --- | --- | --- |
+|------|------|------|
 | Admin | admin@example.com | admin123 |
 | Member | member@example.com | member123 |
 
-You can also create your own account from the signup screen.
+You can also create your own account using the Signup page.
 
-## Project Structure
+---
 
-```text
-team-task-manager-full-stack/
-  backend/
-    server.js
-    data/
-      seed.json
-  frontend/
-    index.html
-    src/
-      app.js
-      styles.css
-  package.json
-  README.md
+# 📊 Dashboard Features
+
+- Total Tasks Overview
+- Completed Tasks Tracking
+- Pending Tasks Monitoring
+- Overdue Tasks Detection
+- Project Progress Analytics
+- Team Collaboration Tracking
+
+---
+
+# 🔐 Role Permissions
+
+## Admin
+- Create Projects
+- Add or Remove Team Members
+- Create and Assign Tasks
+- Update Any Task
+- Delete Tasks
+- View Complete Dashboard Data
+
+## Member
+- View Assigned Tasks
+- Update Task Status
+- Access Team Projects
+- Track Personal Task Progress
+
+---
+
+# 📡 REST API Endpoints
+
+## Authentication
+
+```http
+POST /api/auth/signup
+POST /api/auth/login
+GET  /api/auth/me
 ```
 
-## Main API Routes
+## Users
 
-### Auth
-
-- `POST /api/auth/signup`
-- `POST /api/auth/login`
-- `GET /api/auth/me`
-
-### Users
-
-- `GET /api/users`
-
-### Projects
-
-- `GET /api/projects`
-- `POST /api/projects` Admin only
-- `PATCH /api/projects/:id/team` Admin only
-
-### Tasks
-
-- `GET /api/tasks`
-- `POST /api/tasks` Admin only
-- `PATCH /api/tasks/:id/status`
-- `DELETE /api/tasks/:id` Admin only
-
-### Dashboard
-
-- `GET /api/dashboard`
-
-## Role Rules
-
-- Admin can create projects, manage project teams, create tasks, assign tasks, update any task, and delete tasks.
-- Member can view assigned/team project tasks and update status for tasks assigned to them.
-
-## Notes for GitHub Submission
-
-This project has no external npm dependencies, so it is easy to run after cloning:
-
-```bash
-git clone <your-repo-url>
-cd team-task-manager-full-stack
-npm start
+```http
+GET /api/users
 ```
 
+## Projects
+
+```http
+GET    /api/projects
+POST   /api/projects
+PATCH  /api/projects/:id/team
+```
+
+## Tasks
+
+```http
+GET     /api/tasks
+POST    /api/tasks
+PATCH   /api/tasks/:id/status
+DELETE  /api/tasks/:id
+```
+
+## Dashboard
+
+```http
+GET /api/dashboard
+```
+
+---
+
+# 🧠 Application Highlights
+
+- Clean Full-Stack Architecture
+- Simple File-Based Data Storage
+- Lightweight Backend Without External Database
+- Beginner-Friendly MERN-style Project
+- Easy Deployment on Render and Vercel
+- Designed for Team Collaboration and Productivity
+
+---
+
+# ☁️ Deployment
+
+## Backend Deployment
+- Render
+
+## Frontend Deployment
+- Vercel
+
+---
+
+# 📌 Future Improvements
+
+- JWT Authentication
+- MongoDB Integration
+- Real-Time Notifications
+- File Upload Support
+- Activity Logs
+- Team Chat System
+- Drag-and-Drop Kanban Board
+
+---
+
+# 👨‍💻 Author
+
+**Sudhir Mathur**
+
+- GitHub: https://github.com/Sudhir104
+- LinkedIn: https://www.linkedin.com/in/sudhir-mathur-346b3b268
+
+---
+
+# ⭐ Repository
+
+Repository Link:
+https://github.com/Sudhir104/Team-Task-Manager-Full-Stack
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
